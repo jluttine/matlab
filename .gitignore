@@ -1,0 +1,7 @@
+*~
+.svn
+*.mex*
+*.backup
+*.eps
+*.pdf
+*.sh
