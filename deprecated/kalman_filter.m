@@ -8,6 +8,8 @@ function [X, CovX] = kalman_filter(measurement, ...
                                    x, ...
                                    C)
 
+warning('This function is deprecated')
+
 error('Not ready yet..')
 return
 

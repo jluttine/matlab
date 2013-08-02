@@ -1,4 +1,6 @@
 function test_dist_earth
+warning('This function is deprecated')
+
 
 % Grid
 % $$$ lon = linspace(22,28,100);

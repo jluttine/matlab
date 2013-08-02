@@ -1,4 +1,6 @@
 function test_t_tml
+warning('This function is deprecated')
+
 
 n = 100;
 t2 = trnd(10,n,1).^2;

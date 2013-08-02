@@ -1,5 +1,7 @@
 
 function [addk,getk,gets] = test_nested_functions()
+warning('This function is deprecated')
+
 
 k = 0;
 

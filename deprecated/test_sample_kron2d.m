@@ -1,4 +1,6 @@
 function test_sample_kron2d
+warning('This function is deprecated')
+
 
 % Length-scale=30 and PCG-iterations=20
 % 500x500 = 2.7s

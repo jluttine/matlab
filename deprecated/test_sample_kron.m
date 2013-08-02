@@ -1,4 +1,6 @@
 function test_sample_kron
+warning('This function is deprecated')
+
 
 N1 = 200;
 x1 = 1:N1;

@@ -1,5 +1,7 @@
 
 function x = mymvnrnd(mu, Cov)
+warning('This function is deprecated')
+
 
 if false %issparse(Cov)
   [L,p,S] = chol(Cov, 'lower');

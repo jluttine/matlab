@@ -1,5 +1,7 @@
 
 function test_argparse
+warning('This function is deprecated')
+
 
 options = struct('Eka', 1, 'Toka', 2);
 

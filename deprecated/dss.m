@@ -1,4 +1,6 @@
 function [Af,Sf,S,Sv,Vf] = dss(A, S, Sv, cutoff, nComp)
+warning('This function is deprecated')
+
 % [Af,Sf,S,Vf] = dss(A, S, Sv, filter, nComp)
 
 % $$$ error(nargchk(4,5,nargin));

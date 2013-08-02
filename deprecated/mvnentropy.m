@@ -1,4 +1,6 @@
 function H = mvnentropy(Cov, ischol)
+warning('This function is deprecated')
+
 % H = entropy_gaussian(Cov)
 %
 % Cov is covariance matrix, or optionally, an upper triangular matrix U such

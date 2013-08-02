@@ -1,4 +1,6 @@
 function H = mnorm_entropy(U)
+warning('This function is deprecated')
+
 % H = mnorm_entropy(U)
 %
 % U is the Cholesky factor of a covariance matrix C, that is, a lower or

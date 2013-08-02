@@ -1,4 +1,6 @@
 function p = studpdf(x,mu,s2,nu)
+warning('This function is deprecated')
+
 % function p = studpdf(x,mu,s2,nu)
 
 p = 1;

@@ -1,4 +1,6 @@
 function Z = spinv(X)
+warning('This function is deprecated')
+
 % Calculates the sparse inverse of X, that is, only those elements (i,j)
 % of the inverse that are non-zero in X. Note, that the real inverse can
 % be full! ALSO, X should be symmetric!! What about positive definite?

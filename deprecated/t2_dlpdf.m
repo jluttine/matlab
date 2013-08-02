@@ -1,4 +1,6 @@
 function dy = t2_dlpdf(x2, nu)
+warning('This function is deprecated')
+
 % Derivative of the Student-t log-probability density function (lpdf) with
 % degrees of freedom NU.
 %

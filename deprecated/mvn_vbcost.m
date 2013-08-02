@@ -1,4 +1,6 @@
 function c = mvn_vbcost(x,L,mu,L_mu,L_K,logdet_K)
+warning('This function is deprecated')
+
 % c = mvnvbcost(x,Covx,mu,Covmu,pCholCov,pLogDetCov)
 %
 % Calculates c = -KL(q||p) = <log p(X)> - <log q(X)>

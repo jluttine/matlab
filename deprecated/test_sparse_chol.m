@@ -1,5 +1,7 @@
 
 function test_sparse_chol
+warning('This function is deprecated')
+
 
 N = 2000;
 x = 1:N;

@@ -1,4 +1,6 @@
 function test_dist_earth_gradient
+warning('This function is deprecated')
+
 
 %rand('state', 1);
 

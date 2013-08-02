@@ -1,6 +1,8 @@
 
 % function y = mnormrnd(mu, Cov, n)
 function y = mnormrnd(mu, Cov, n)
+warning('This function is deprecated')
+
 
 m = max(length(mu), length(Cov));
 

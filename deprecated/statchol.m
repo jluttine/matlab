@@ -1,4 +1,6 @@
 function [T,p] = statchol(Sigma,flag)
+warning('This function is deprecated')
+
 %STATCHOL  Do Cholesky-like decomposition, allowing zero eigenvalues
 %   T = STATCHOL(SIGMA) computes T such that SIGMA = T'*T.  Sigma must be
 %   square and symmetric.  If SIGMA is positive definite, then T is the

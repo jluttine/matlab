@@ -1,4 +1,6 @@
 function c = mnorm_vbcost(x, L, mu, L_mu, L_K, logdet_K)
+warning('This function is deprecated')
+
 % C = MNORM_VBCOST(X, L, MU, L_MU, L_K, LOGDET_K)
 %
 % Evaluates C = -KL(q||p) = <log p(X)> - <log q(X)> where the expectation

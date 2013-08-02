@@ -1,4 +1,6 @@
 function d = gamkl(x,logx,apost,bpost,aprior,bprior)
+warning('This function is deprecated')
+
 % KL divergence for Gamma distributions.
 % A lower bound for a Gamma distributed X:
 % p(X) = G(aprior,bprior)

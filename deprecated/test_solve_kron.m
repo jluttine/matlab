@@ -1,5 +1,7 @@
 
 function test_solve_kron
+warning('This function is deprecated')
+
 
 N1 = 150;
 x1 = 1:N1;

@@ -23,6 +23,8 @@
 % X2 = (T-MU)' * inv(COV) * (T-MU)
 
 function [y, dy] = t2_lpdf(x2, nu, D)
+warning('This function is deprecated')
+
 
 warning('Deprecated. Use T_LOGPDF instead.')
 

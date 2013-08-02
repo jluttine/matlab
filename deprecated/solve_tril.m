@@ -1,4 +1,6 @@
 function X = solve_tril(L, Y)
+warning('This function is deprecated')
+
 % function X = solve_tril(L, Y)
 %
 % Solves X = L \ Y, or L*X = Y,  when L is lower triangular.

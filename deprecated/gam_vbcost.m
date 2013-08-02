@@ -1,5 +1,7 @@
 
 function c = gam_vbcost(x,logx,apost,bpost,aprior,bprior)
+warning('This function is deprecated')
+
 % function c = gam_vbcost(x,logx,apost,bpost,aprior,bprior)
 %
 % Calculates c = -KL(q||p) = <log p(X)> - <log q(X)>
