@@ -1,5 +1,6 @@
 
 function Q = demo_rvbpcamv
+warning('This demo is deprecated. See folder fa instead')
 
 n = 50;
 m = 2;
@@ -35,11 +36,21 @@ pmv = (rand(m,n) < 0.0);
 Ynom(pmv) = NaN;
 
 % Use STANDARD PCA for non-outlier data
-[W_pca, X_pca, mu_pca, s2_pca] = pca_full(Yn, d);
+Q = vbpcamv(Yn, d);
+W_pca = Q.W
+X_pca = Q.X
+mu_pca = Q.mu
+s2_pca = 1/Q.tau
+%[W_pca, X_pca, mu_pca, s2_pca] = pca_full(Yn, d);
 Y_pca = W_pca*X_pca + repmat(mu_pca, 1, n);
 
 % Run different algorithms
-[W_p, X_p, mu_p, s2_p] = pca_full(Ynom, d);
+Q = vbpcamv(Ynom, d);
+W_p = Q.W
+X_p = Q.X
+mu_p = Q.mu
+s2_p = 1/Q.tau
+%[W_p, X_p, mu_p, s2_p] = pca_full(Ynom, d);
 [W_rp,X_rp,Sv_rp,mu_rp,nu_rp,s2_rp,U_rp] = rppcamv(Ynom, d, 'maxiters', 100);
 init.tau = 1e2;
 init.nu = 1;

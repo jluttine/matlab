@@ -36,7 +36,8 @@ end
 
 % Use Cholesky of the prior covariance
 z = linsolve_tril(L_K, x-mu);
-z2 = z'*z + traceprod(linsolve_tril(L_K, L+L_mu));
+V = linsolve_tril(L_K, L+L_mu)
+z2 = z'*z + traceprod(V, V);
 
 lp = - 0.5*logdet_K - 0.5*z2 - 0.5*d*log(2*pi);
 

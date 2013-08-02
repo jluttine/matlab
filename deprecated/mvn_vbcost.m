@@ -36,6 +36,7 @@ z = solve_tril(L_K, x-mu);
 % Cost from prior
 
 % Below: (x-mu)' * Cov^(-1) * (x-mu) + trace(Cov^(-1)*(Covx+Covmu))
-err2 = z'*z + trace(linsolve_chol(L_K, L*L'+L_mu*L_mu')); % TODO: Optimize!
+V = linsolve_chol(L_K, L*L'+L_mu*L_mu')
+err2 = z'*z + trace(V, V); % TODO: Optimize!
 % $$$ err2 = z'*z + trace(solve_triu(pCholCov',solve_tril(pCholCov,Covx+Covmu)));
 c = c - 0.5*logdet_K - 0.5*err2 - 0.5*d*log(2*pi);
