@@ -7,6 +7,8 @@
 
 function Q = vbrfa(Y, D, varargin)
 
+warning("This method is deprecated. See fa/demo_rfa.m")
+
 [M,N] = size(Y);
 
 options = struct( ...

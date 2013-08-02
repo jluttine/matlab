@@ -76,6 +76,7 @@ for model=1:4
    case 1
     % Gaussian noise
     noise = noise_iso;
+    name = 'Isotropic Gaussian noise'
     
    case 2
 
@@ -85,6 +86,7 @@ for model=1:4
                                     'update_nu', 1, ...
                                     'init', struct('nu', 0.1)), ...
         noise_iso);
+    name = 'Multivariate Student-t noise'
 
    case 3
     % Independent t
@@ -94,11 +96,13 @@ for model=1:4
                                    'nu', 'pooled', ...
                                    'init', struct('nu', 0.1)), ...
         noise_iso);
+    name = 'Independent Student-t noise'
 
    case 4
     % Laplace
     noise = noise_module_product(noise_module_laplace(M, N), ...
                                  noise_iso);
+    name = 'Laplace noise'
   end
 
   Q = vbfa(D+1, Ynom, W_module, X_module, noise, ...
@@ -112,7 +116,7 @@ for model=1:4
 
 % $$$ plot_results(Ynom, []);
 % $$$ title('Data')
-  plot_results(Ynom, Yh)
+  plot_results(Ynom, Yh, name)
 % $$$   title('Gaussian')
 % $$$     plot_results(Ynom, Y_tpca)
 % $$$     title('Multivariate t')
@@ -128,7 +132,7 @@ rmse_recon
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-function plot_results(Y, Yh)
+function plot_results(Y, Yh, name)
 %subspace2d(Yh, [], Y)
 figure
 plot(Y(1,:), Y(2,:), 'x', 'markersize', 5, 'color', [.2 .2 .2]);
@@ -151,6 +155,8 @@ ymg = 0.05 * (max(Y(2,:)) - min(Y(2,:)));
 xl = [min(Y(1,:))-xmg, max(Y(1,:))+xmg];
 yl = [min(Y(2,:))-ymg, max(Y(2,:))+ymg];
 set(gca, 'xlim', xl, 'ylim', yl);
+
+title(name)
 
 % $$$ % Mark outliers
 % $$$ hold on
